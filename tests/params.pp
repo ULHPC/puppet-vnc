@@ -15,7 +15,7 @@
 
 include 'vnc::params'
 
-$names = ["ensure", "protocol", "port", "packagename"]
+$names = ['ensure', 'protocol', 'port', 'packagename']
 
 notice("vnc::params::ensure = ${vnc::params::ensure}")
 notice("vnc::params::protocol = ${vnc::params::protocol}")
