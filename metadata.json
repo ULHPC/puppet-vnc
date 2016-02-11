@@ -26,5 +26,17 @@
       ]
     }
   ],
-  "tags": ["vnc"]
+  "tags": [
+    "vnc"
+  ],
+  "classes": [
+    "vnc",
+    "vnc::common",
+    "vnc::debian",
+    "vnc::params",
+    "vnc::redhat"
+  ],
+  "definitions": [
+
+  ]
 }
