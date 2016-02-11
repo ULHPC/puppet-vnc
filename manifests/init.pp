@@ -58,7 +58,7 @@ inherits vnc::params
         debian, ubuntu:         { include vnc::debian }
         redhat, fedora, centos: { include vnc::redhat }
         default: {
-            fail("Module $module_name is not supported on $operatingsystem")
+            fail("Module ${::module_name} is not supported on ${::operatingsystem}")
         }
     }
 }

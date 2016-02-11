@@ -15,19 +15,19 @@ class vnc::common {
     require vnc::params
 
     package { 'vnc':
-        name    => $vnc::params::packagename,
-        ensure  => $vnc::ensure,
+        ensure => $vnc::ensure,
+        name   => $vnc::params::packagename,
     }
 
     file { "${vnc::configpath}/.vnc":
-        ensure  => 'directory',
-        mode    => '0755',
-        owner   => $vnc::configuser,
+        ensure => 'directory',
+        mode   => '0755',
+        owner  => $vnc::configuser,
     } ->
     file { "${vnc::configpath}/.vnc/xstartup":
-        ensure  => $vnc::ensure,
-        mode    => '0755',
-        source  => 'puppet:///modules/vnc/xstartup',
+        ensure => $vnc::ensure,
+        mode   => '0755',
+        source => 'puppet:///modules/vnc/xstartup',
     }
 
     package { $vnc::params::environment_packages :

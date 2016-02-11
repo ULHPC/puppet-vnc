@@ -30,31 +30,31 @@ class vnc::params {
     ###########################################
 
     # ensure the presence (or absence) of vnc
-    $ensure = $vnc_ensure ? {
+    $ensure = $::vnc_ensure ? {
         ''      => 'present',
-        default => "${vnc_ensure}"
+        default => $::vnc_ensure
     }
 
     # configuration path of VNC
-    $configpath = $vnc_configpath ? {
+    $configpath = $::vnc_configpath ? {
         ''      => '/var/lib/localadmin/',
-        default => "${vnc_configpath}"
+        default => $::vnc_configpath
     }
     # configuration user of VNC
-    $configuser = $vnc_configuser ? {
+    $configuser = $::vnc_configuser ? {
         ''      => 'localadmin',
-        default => "${vnc_configuser}"
+        default => $::vnc_configuser
     }
 
     # The Protocol used. Used by monitor and firewall class. Default is 'tcp'
-    $protocol = $vnc_protocol ? {
+    $protocol = $::vnc_protocol ? {
         ''      => 'tcp',
-        default => "${vnc_protocol}",
+        default => $::vnc_protocol,
     }
     # The port number. Used by monitor and firewall class. The default is 22.
-    $port = $vnc_port ? {
+    $port = $::vnc_port ? {
         ''      => 5900,
-        default => "${vnc_port}",
+        default => $::vnc_port,
     }
 
 
@@ -84,4 +84,3 @@ class vnc::params {
     }
 
 }
-
