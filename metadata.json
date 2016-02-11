@@ -3,8 +3,8 @@
   "version": "0.1.1",
   "author": "S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team",
   "mail": "hpc-sysadmins@uni.lu",
-  "summary": "Configure and manage vnc",
-  "description": "Configure and manage vnc",
+  "summary": "Install and configure vnc",
+  "description": "Install and configure vnc",
   "license": "GPL-3.0",
   "source": "https://github.com/ULHPC/puppet-vnc",
   "docs_project": "ulhpc-puppet-vnc",
@@ -26,6 +26,12 @@
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
         "7"
       ]
     }
