@@ -16,5 +16,11 @@
 #      sudo puppet apply -t /vagrant/tests/init.pp
 #
 node default {
-    include vnc
+
+    class { 'vnc':
+      ensure => present,
+      configpath => '/root',
+      configuser => 'root',
+    }
+  
 }
