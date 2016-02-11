@@ -18,9 +18,9 @@
 node default {
 
     class { 'vnc':
-      ensure => present,
+      ensure     => present,
       configpath => '/root',
       configuser => 'root',
     }
-  
+
 }
