@@ -1,0 +1,42 @@
+{
+  "name": "ULHPC/vnc",
+  "version": "0.1.0",
+  "author": "S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team",
+  "mail": "hpc-sysadmins@uni.lu",
+  "summary": "Configure and manage vnc",
+  "description": "Configure and manage vnc",
+  "license": "GPL-3.0",
+  "source": "https://github.com/ULHPC/puppet-vnc",
+  "docs_project": "ulhpc-puppet-vnc",
+  "project_page": "https://github.com/ULHPC/puppet-vnc",
+  "issues_url": "https://github.com/ULHPC/puppet-vnc/issues",
+  "forge_url": "https://forge.puppetlabs.com/ULHPC/vnc",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">=4.2.2 <5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "tags": [
+    "vnc"
+  ],
+  "classes": [
+    "vnc",
+    "vnc::common",
+    "vnc::debian",
+    "vnc::params",
+    "vnc::redhat"
+  ],
+  "definitions": [
+
+  ]
+}
