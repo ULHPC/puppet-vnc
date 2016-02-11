@@ -7,4 +7,13 @@
 # = Class: vnc::redhat
 #
 # Specialization class for Redhat systems
-class vnc::redhat inherits vnc::common { }
+class vnc::redhat inherits vnc::common {
+
+  include epel
+
+  package { $vnc::params::environment_packages :
+      ensure  => $vnc::ensure,
+      require => Class['epel'],
+  }
+
+}

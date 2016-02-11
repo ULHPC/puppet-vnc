@@ -30,8 +30,4 @@ class vnc::common {
         source => 'puppet:///modules/vnc/xstartup',
     }
 
-    package { $vnc::params::environment_packages :
-        ensure  => $vnc::ensure,
-    }
-
 }

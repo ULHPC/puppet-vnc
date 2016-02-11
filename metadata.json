@@ -1,10 +1,10 @@
 {
   "name": "ULHPC/vnc",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team",
   "mail": "hpc-sysadmins@uni.lu",
-  "summary": "Configure and manage vnc",
-  "description": "Configure and manage vnc",
+  "summary": "Install and configure vnc",
+  "description": "Install and configure vnc",
   "license": "GPL-3.0",
   "source": "https://github.com/ULHPC/puppet-vnc",
   "docs_project": "ulhpc-puppet-vnc",
@@ -15,6 +15,10 @@
     {
       "name": "puppetlabs-stdlib",
       "version_requirement": ">=4.2.2 <5.0.0"
+    },
+    {
+      "name": "stahnma-epel",
+      "version_requirement": ">=1.2.2 <2.0.0"
     }
   ],
   "operatingsystem_support": [
@@ -22,6 +26,12 @@
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
         "7"
       ]
     }

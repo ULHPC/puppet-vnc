@@ -15,12 +15,15 @@
 
 include 'vnc::params'
 
-$names = ['ensure', 'protocol', 'port', 'packagename']
+$names = ['ensure', 'configpath', 'configuser', 'protocol', 'port', 'packagename', 'environment_packages']
 
 notice("vnc::params::ensure = ${vnc::params::ensure}")
+notice("vnc::params::configpath = ${vnc::params::configpath}")
+notice("vnc::params::configuser = ${vnc::params::configuser}")
 notice("vnc::params::protocol = ${vnc::params::protocol}")
 notice("vnc::params::port = ${vnc::params::port}")
 notice("vnc::params::packagename = ${vnc::params::packagename}")
+notice("vnc::params::environment_packages = ${vnc::params::environment_packages}")
 
 #each($names) |$v| {
 #    $var = "vnc::params::${v}"

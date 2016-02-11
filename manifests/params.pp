@@ -72,15 +72,19 @@ class vnc::params {
     }
 
     $environment_packages = $::operatingsystem ? {
-        /(?i-mx:centos|fedora|redhat)/ => $::lsbmajdistrelease ? {
-            '5'                        => ['firefox', 'xorg-x11-apps', 'icewm', 'icewm-xdgmenu', 'icewm-gnome', 'xterm'],
-            default                    => ['firefox', 'xorg-x11-apps', 'icewm', 'icewm-xdgmenu', 'icewm-gnome', 'xterm']
+        /(?i-mx:fedora|redhat)/ => $::lsbmajdistrelease ? {
+            '5'                 => ['firefox', 'xorg-x11-apps', 'icewm', 'icewm-xdgmenu', 'icewm-gnome', 'xterm'],
+            default             => ['firefox', 'xorg-x11-apps', 'icewm', 'icewm-xdgmenu', 'icewm-gnome', 'xterm']
         },
-        'debian'                       => $::lsbmajdistrelease ? {
-            '7'                        => ['iceweasel', 'x11-apps', 'icewm', 'xterm'],
-            default                    => ['iceweasel', 'x11-apps', 'icewm', 'xterm']
+        'centos'                => $::operatingsystemmajrelease ? {
+            '7'                 => ['firefox', 'xorg-x11-apps', 'icewm', 'icewm-xdgmenu', 'xterm'],
+            default             => ['firefox', 'xorg-x11-apps', 'icewm', 'icewm-xdgmenu', 'icewm-gnome', 'xterm']
         },
-        default                        => ['firefox', 'xorg-x11-apps', 'icewm', 'icewm-xdgmenu', 'icewm-gnome', 'xterm']
+        'debian'                => $::lsbmajdistrelease ? {
+            '7'                 => ['iceweasel', 'x11-apps', 'icewm', 'xterm'],
+            default             => ['iceweasel', 'x11-apps', 'icewm', 'xterm']
+        },
+        default                 => ['firefox', 'xorg-x11-apps', 'icewm', 'icewm-xdgmenu', 'icewm-gnome', 'xterm']
     }
 
 }
