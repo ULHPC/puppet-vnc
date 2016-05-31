@@ -4,7 +4,7 @@
 
 [![Puppet Forge](http://img.shields.io/puppetforge/v/ULHPC/vnc.svg)](https://forge.puppetlabs.com/ULHPC/vnc)
 [![License](http://img.shields.io/:license-GPL3.0-blue.svg)](LICENSE)
-![Supported Platforms](http://img.shields.io/badge/platform-debian-lightgrey.svg)
+![Supported Platforms](http://img.shields.io/badge/platform-debian|centos-lightgrey.svg)
 [![Documentation Status](https://readthedocs.org/projects/ulhpc-puppet-vnc/badge/?version=latest)](https://readthedocs.org/projects/ulhpc-puppet-vnc/?badge=latest)
 
       Copyright (c) 2016 S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team <hpc-sysadmins@uni.lu>
@@ -13,7 +13,7 @@
 
 
 -----------
-The [ULHPC/vnc](https://github.com/ULHPC/puppet-vnc) puppet module has been designed to configure and manage vnc
+The [ULHPC/vnc](https://github.com/ULHPC/puppet-vnc) puppet module has been designed to install and configure vnc
 
 This is the main page of the documentation for this Puppet module, which is hosted and managed by [Read the Docs](http://ulhpc-vnc.readthedocs.org/en/latest/).
 It proposes to detail the following elements:

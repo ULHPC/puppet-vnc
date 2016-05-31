@@ -73,6 +73,7 @@ class vnc::params {
 
     $environment_packages = $::operatingsystem ? {
         /(?i-mx:fedora|redhat)/ => $::lsbmajdistrelease ? {
+            '7'                 => ['firefox', 'xorg-x11-apps', 'icewm', 'icewm-xdgmenu', 'xterm'],
             '5'                 => ['firefox', 'xorg-x11-apps', 'icewm', 'icewm-xdgmenu', 'icewm-gnome', 'xterm'],
             default             => ['firefox', 'xorg-x11-apps', 'icewm', 'icewm-xdgmenu', 'icewm-gnome', 'xterm']
         },
